@@ -3,12 +3,12 @@ import classNames from 'classnames';
 import { useThemeContext } from '../../contexts/themeContext';
 
 export const Button = ({ variant, buttonText, onClick }) => {
-  const { state } = useThemeContext();
+  const { state:{isDarkThemeActive} } = useThemeContext();
   return (
     <button
       className={classNames(
         styles.mainButton,
-        styles[`btn_${variant}_${state.activeDarkTheme ? 'dark' : 'light'}`],
+        styles[`btn_${variant}_${isDarkThemeActive ? 'dark' : 'light'}`],
       )}
       onClick={onClick}
     >

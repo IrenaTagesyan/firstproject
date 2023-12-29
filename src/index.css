@@ -5,6 +5,8 @@
   --light_secondary_color: #b7d7ff;
   --danger_color: #dd2a2f;
   --success_color: #0ccf4f;
+  --dark_color: #02040e;
+  --light_color: #fbfcff;
 }
 
 * {

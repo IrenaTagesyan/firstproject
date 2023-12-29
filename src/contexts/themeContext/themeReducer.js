@@ -1,18 +1,16 @@
 export const themeInitialState = {
-activeDarkTheme: false,
-};
-
-export const themeActions = {
-  DARK_ACTIVE: 'DARK_ACTIVE',
+  isDarkThemeActive: true,
 };
 
 export const ThemeReducer = (state, action) => {
   const { type, payload } = action;
 
   switch (type) {
-    case 'DARK_ACTIVE':
-      return { ...state, isDark: payload };
+    case 'IS_DARK_THEME_ACTIVE':
+      return { ...state, isDarkThemeActive: true };
 
+    case 'DARK_THEME_NOT_ACTIVE':
+      return { ...state, isDarkThemeActive: false };
     default:
       return state;
   }

@@ -1,5 +1,6 @@
 import { createContext, useContext, useReducer } from 'react';
-import { ThemeReducer, themeActions, themeInitialState } from './themeReducer';
+import { ThemeReducer, themeInitialState } from './themeReducer';
+import { DARK_THEME_ACTIVE,DARK_THEME_NOT_ACTIVE } from './actionTypes';
 
 const ThemeContext = createContext();
 
@@ -7,11 +8,11 @@ export const ThemeContextProvider = ({ children }) => {
   const [state, dispatch] = useReducer(ThemeReducer, themeInitialState);
 
   const darkThemeOn = () => {
-    dispatch({ type: themeActions.DARK_ACTIVE, payload: true });
+    dispatch({ type: DARK_THEME_ACTIVE });
   };
 
   const darkThemeOff = () => {
-    dispatch({ type: themeActions.DARK_ACTIVE, payload: false });
+    dispatch({ type: DARK_THEME_NOT_ACTIVE });
   };
 
   const data = {
@@ -25,5 +26,5 @@ export const ThemeContextProvider = ({ children }) => {
 
 export const useThemeContext = () => {
   const { state, darkThemeOn, darkThemeOff } = useContext(ThemeContext);
-    return { state, darkThemeOn, darkThemeOff };
+  return { state, darkThemeOn, darkThemeOff };
 };
