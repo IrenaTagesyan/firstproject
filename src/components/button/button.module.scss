@@ -1,0 +1,66 @@
+.mainButton {
+  padding: 4px 16px;
+  border-radius: 10px;
+  font-size: 20px;
+  color: white;
+}
+
+.btn_primary_light {
+  background: var(--light_primary_color);
+  border: 1px solid var(--light_primary_color);
+
+  & :hover {
+    background: var(--light_color);
+    color: var(--light_primary_color);
+  }
+}
+
+.btn_secondary_light {
+  background: var(--light_secondary_color);
+  border: 1px solid var(--light_secondary_color);
+
+  &:hover {
+    background: var(--light_color);
+    color: var(--light_secondary_color);
+  }
+}
+
+.btn_primary_dark {
+  background: var(--dark_primary_color);
+  border: 1px solid var(--dark_primary_color);
+
+  & :hover {
+    background: var(--dark_color);
+    color: var(--dark_primary_color);
+  }
+}
+
+.btn_secondary_dark {
+  background: var(--dark_secondary_color);
+  border: 1px solid var(--dark_secondary_color);
+
+  &:hover {
+    background: var(--dark_color);
+    color: var(--dark_secondary_color);
+  }
+}
+
+.btn_success {
+  background: var(--success_color);
+  border: 1px solid var(--success_color);
+
+  & :hover {
+    background: white;
+    color: var(--success_color);
+  }
+}
+
+.btn_failed {
+  background: var(--danger_color);
+  border: 1px solid var(--danger_color);
+
+  & :hover {
+    background: white;
+    color: var(--danger_color);
+  }
+}
